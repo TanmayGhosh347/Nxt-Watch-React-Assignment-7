@@ -16,7 +16,7 @@ import {
 import './index.css'
 
 const HomeVideoCard = props => {
-  const video = props
+  const {video} = props
   const {
     id,
     title,

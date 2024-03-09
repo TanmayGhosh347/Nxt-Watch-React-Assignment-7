@@ -10,7 +10,7 @@ export const FailedView = styled.div`
 
 export const FailedImage = styled.img`
   width: 200px;
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 450px;
   }
 `

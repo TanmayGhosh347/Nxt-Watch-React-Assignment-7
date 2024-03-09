@@ -6,7 +6,7 @@ export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-self: center;
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 280px;
     margin-right: 20px;
   }
@@ -58,10 +58,3 @@ export const Dot = styled.span`
   padding-left: 5px;
   padding-right: 5px;
 `
-
-export const HomeContainer = styled.div`
-  @media screen (min-width: 768px) {
-  }
-`
-
-export const HomeContainer = styled.div``

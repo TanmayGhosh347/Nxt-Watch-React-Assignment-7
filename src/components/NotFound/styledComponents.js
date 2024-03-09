@@ -9,7 +9,7 @@ export const NotFoundContainer = styled.div`
   margin-bottom: 60px;
   overflow-y: auto;
   background-color: ${props => props.bgColor};
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-left: 250px;
     margin-bottom: 0px;
   }
@@ -25,7 +25,7 @@ export const NotFoundVideosView = styled.div`
 
 export const NotFoundVideosImage = styled.img`
   width: 200px;
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 450px;
   }
 `

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-    background-color: ${props => props.bgColor} ;
-    min-height: 100vh;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    overflow-y: auto;
- @media screen (min-width : 768px) {
+  background-color: ${props => props.bgColor};
+  min-height: 100vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  overflow-y: auto;
+  @media screen and (min-width: 768px) {
     margin-left: 250px;
-    margin-bottom: 0px;     
- }
+    margin-bottom: 0px;
+  }
 `
 
 export const BannerContainer = styled.div`
@@ -20,20 +20,19 @@ export const BannerContainer = styled.div`
   justify-content: space-between;
   padding: 20px;
   display: ${props => props.display};
- @media screen (min-width : 768px) {
-     
- }
+  @media screen and (min-width: 768px) {
+  }
 `
 
 export const BannerLeftPart = styled.div`
- @media screen (min-width : 768px) {
-   width:50%;  
- }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 `
 
 export const BannerRightPart = styled.div`
-  display:flex;
-  justify-content:flex-end;
+  display: flex;
+  justify-content: flex-end;
 `
 
 export const BannerImage = styled.img`
@@ -49,24 +48,22 @@ export const BannerButton = styled.button`
   border: 1px solid #000000;
   color: #000000;
   background: none;
-`  
+`
 
 export const BannerText = styled.p`
   font-family: 'Roboto';
   font-size: 15px;
   color: #000000;
- @media screen (min-width : 768px) {
-  font-size: 20px;     
- }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `
 
-export const BannerCloseButton  = styled.button`
- border: none; 
- background: none;
- height: 25px;
-`  
-  ,
-
+export const BannerCloseButton = styled.button`
+  border: none;
+  background: none;
+  height: 25px;
+`
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -75,10 +72,10 @@ export const SearchContainer = styled.div`
   margin: 20px;
   width: 60%;
   height: 40px;
- @media screen (min-width : 768px) {
-  width: 40%;     
- }
-`   
+  @media screen and (min-width: 768px) {
+    width: 40%;
+  }
+`
 export const SearchIconContainer = styled.button`
   display: flex;
   justify-content: center;
@@ -86,7 +83,7 @@ export const SearchIconContainer = styled.button`
   background-color: #909090;
   width: 70px;
   border: none;
-`   
+`
 
 export const SearchInput = styled.input`
   background: none;
@@ -96,12 +93,11 @@ export const SearchInput = styled.input`
   border: none;
   font-family: 'Roboto';
   color: ${props => props.color};
-`  
-
+`
 
 export const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-`  
+`

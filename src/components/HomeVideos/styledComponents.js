@@ -9,7 +9,7 @@ export const NoVideosView = styled.div`
 `
 export const NoVideosImage = styled.img`
   width: 200px;
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 450px;
   }
 `
@@ -30,7 +30,7 @@ export const VideoCardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-left: 20px;
   }
 `

@@ -14,7 +14,7 @@ export const NavigationLgContainer = styled.div`
   position: fixed;
   top: 60px;
   background-color: ${props => props.bgColor};
-  @media screen (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `
@@ -81,7 +81,7 @@ export const NavigationSmallContainer = styled.div`
   bottom: 0;
   align-items: center;
   background-color: ${props => props.bgColor};
-  @media screen (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `

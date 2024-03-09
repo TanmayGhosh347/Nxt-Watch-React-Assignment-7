@@ -68,12 +68,40 @@ const Header = props => (
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
               alt="profile"
             />
+
             <Popup
               modal
               trigger={
                 <LogoutButton type="button" bgColor={bgColor} color={color}>
                   Logout
                 </LogoutButton>
+              }
+            >
+              {close => (
+                <ModalContainer>
+                  <ModalDesc>Are you sure, you want to logout?</ModalDesc>
+                  <ButtonsContainer>
+                    <CloseButton
+                      type="button"
+                      data-testid="closeButton"
+                      onClick={() => close()}
+                    >
+                      Cancel
+                    </CloseButton>
+                    <ConfirmButton type="button" onClick={onClickLogout}>
+                      Confirm
+                    </ConfirmButton>
+                  </ButtonsContainer>
+                </ModalContainer>
+              )}
+            </Popup>
+
+            <Popup
+              modal
+              trigger={
+                <LogOutIconButton type="button">
+                  <FiLogOut size={25} color={color} />
+                </LogOutIconButton>
               }
             >
               {close => (
@@ -101,4 +129,4 @@ const Header = props => (
   </ThemeAndVideoContext.Consumer>
 )
 
-export default Header
+export default withRouter(Header)

@@ -78,10 +78,9 @@ class LoginForm extends Component {
     )
   }
 
-  
   renderPasswordField = () => {
-    const {password , showPassword} = this.state
-    const inputType = 'text' : 'password'
+    const {password, showPassword} = this.state
+    const inputType = showPassword ? 'text' : 'password'
     return (
       <>
         <InputLabel htmlFor="password">PASSWORD</InputLabel>
@@ -94,29 +93,36 @@ class LoginForm extends Component {
           placeholder="Password"
         />
         <CheckboxContainer>
-            <Checkbox type='checkbox' id='checkbox' onChange={this.onShowPassword}/>
-            <showPassword htmlFor='checkbox'>Show Password</showPassword>
+          <Checkbox
+            type="checkbox"
+            id="checkbox"
+            onChange={this.onShowPassword}
+          />
+          <ShowPassword htmlFor="checkbox">Show Password</ShowPassword>
         </CheckboxContainer>
       </>
     )
   }
 
-  render(){
-    const {showSubmitError , errorMsg} = this.state
+  render() {
+    const {showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
-    if(jwtToken !== undefined){
-      return <Redirect to='/'/>
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
     }
-    return(
-        <AppContainer>
-            <FromContainer onSubmit={this.submitFrom}>
-                <LoginLogo src='https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png' alt='website logo'/>
-                <InputContainer>{this.renderUsernameField()}</InputContainer>
-                <InputContainer>{this.renderPasswordField()}</InputContainer>
-                <LoginButton type='submit'>Login</LoginButton>
-                {showSubmitError && <SubmitError>*{errorMsg}</SubmitError>}
-            </FromContainer>
-        </AppContainer>
+    return (
+      <AppContainer>
+        <FromContainer onSubmit={this.submitFrom}>
+          <LoginLogo
+            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+            alt="website logo"
+          />
+          <InputContainer>{this.renderUsernameField()}</InputContainer>
+          <InputContainer>{this.renderPasswordField()}</InputContainer>
+          <LoginButton type="submit">Login</LoginButton>
+          {showSubmitError && <SubmitError>*{errorMsg}</SubmitError>}
+        </FromContainer>
+      </AppContainer>
     )
   }
   //

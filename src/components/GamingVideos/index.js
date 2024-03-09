@@ -77,52 +77,53 @@ class GamingVideos extends Component {
     )
   }
 
-  onRetry = () ={
-      this.getVideos()
+  onRetry = () => {
+    this.getVideos()
   }
 
-  renderFailureView = () => <FailureView onRetry={this.onRetry}/>
+  renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
-  renderTrendingVideos = () =>{
-      const {apiStatus} = this.state
-      switch (apiStatus) {
-          case apiStatusConstants.success:
-            return this.renderVideosView()
-          case apiStatusConstants.failure:
-            return this.renderFailureView()
-          case apiStatusConstants.Loader:
-            return this.renderLoadingView()                                
-          default:
-            return null
-      }
+  renderTrendingVideos = () => {
+    const {apiStatus} = this.state
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderVideosView()
+      case apiStatusConstants.failure:
+        return this.renderFailureView()
+      case apiStatusConstants.Loader:
+        return this.renderLoadingView()
+      default:
+        return null
+    }
   }
 
-  render(){
-    <ThemeAndVideoContext.Consumer>
+  render() {
+    return (
+      <ThemeAndVideoContext.Consumer>
         {value => {
-            const {isDarkTheme} = value
-            const bgColor = isDarkTheme ? '#0f0f0f' : '#f9f9f9'
-            const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
+          const {isDarkTheme} = value
+          const bgColor = isDarkTheme ? '#0f0f0f' : '#f9f9f9'
+          const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
 
-          return(
+          return (
             <div>
-                <Header/>
-                <NavigationBar/>
-                <GamingContainer data-testid='gaming' bgColor={bgColor}>
-                    <GamingVideoTitle>
-                        <GamingTitleIconContainer>
-                            <<SiYoutubegaming size={35} color='#ff0000'/>
-                        </GamingTitleIconContainer>
-                        <GamingText color={textColor}>Gaming</GamingText>                
-                    </GamingVideoTitle>
-                    {this.renderTrendingVideos()}
-                </GamingContainer>
+              <Header />
+              <NavigationBar />
+              <GamingContainer data-testid="gaming" bgColor={bgColor}>
+                <GamingVideoTitle>
+                  <GamingTitleIconContainer>
+                    <SiYoutubegaming size={35} color="#ff0000" />
+                  </GamingTitleIconContainer>
+                  <GamingText color={textColor}>Gaming</GamingText>
+                </GamingVideoTitle>
+                {this.renderTrendingVideos()}
+              </GamingContainer>
             </div>
-            )
+          )
         }}
-    </ThemeAndVideoContext.Consumer>
+      </ThemeAndVideoContext.Consumer>
+    )
   }
-  
 }
 
 export default GamingVideos

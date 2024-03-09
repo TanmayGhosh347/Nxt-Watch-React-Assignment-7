@@ -32,7 +32,7 @@ const NotFound = () => (
               <NotFoundVideosHeading headingColor={headingColor}>
                 Page Not Found
               </NotFoundVideosHeading>
-              <NotFoundVideosNote>
+              <NotFoundVideosNote noteColor={noteColor}>
                 We are sorry, the page you requested could not found.
               </NotFoundVideosNote>
             </NotFoundVideosView>

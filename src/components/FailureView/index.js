@@ -31,7 +31,7 @@ const FailureView = props => {
             <FailedHeading headingColor={headingColor}>
               Oops! Something Went Wrong
             </FailedHeading>
-            <FailedNote>
+            <FailedNote noteColor={noteColor}>
               We are having some trouble to complete your request. <br /> Please
               try again later.
             </FailedNote>
